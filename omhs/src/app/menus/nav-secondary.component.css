@@ -1,109 +1,92 @@
-button[aria-haspopup] {
-    width: 100%;
-    color: #fff;
-    background-color: #151515;
-    box-shadow: inset 0 -1px #1d1d1d;
-    border: none;
-    padding: .6rem;
-    font-family: 'Roboto', 'Helvetica', sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  button[aria-haspopup]:hover, .accordion .link:hover, button[aria-haspopup]:focus, .accordion .link:focus {
-    background: #030303;
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-  }
-  
-  a.active {
-    color: #AB3334;
-    font-weight: 700;
-  }
-  
-  .accordion {
-    width: 100%;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.8);
-    background: #252525;
-    box-shadow: inset 0 -1px #373737;
-    font-family: 'Roboto', 'Helvetica', sans-serif;
-    font-size: 1rem;
-  }
-  
-  .accordion .link {
-    cursor: pointer;
-    display: block;
-    padding: 15px;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1rem;
-    border-bottom: 1px solid rgb(142, 163, 179);
-    position: relative;
-    -webkit-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-  }
-  
-  .accordion li:last-child .link {
-    border-bottom: 0;
-  }
-  
-  .accordion li fa-icon {
-    position: absolute;
-    top: 16px;
-    right: 15px;
-    font-size: 1rem;
-    color: #807f7f;
-    -webkit-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-  }
-  
-  .accordion li.open .link {
-    color: #AB3334;
-    background: #030303;
-    font-weight: 700;
-  }
-  
-  .accordion li.open fa-icon {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-  
-  .submenu {
-    display: none;
-    background: rgb(119, 134, 146);
-    font-size: 1rem;
-  }
-  
-  .submenu li {
-    border-bottom: 1px solid rgb(142, 163, 179);
-  }
-  
-  .submenu a {
-    display: block;
-    text-decoration: none;
-    color: #d9d9d9;
-    padding: 12px;
-    padding-left: 42px;
-    -webkit-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-  }
-  
-  .submenu a:hover {
-    background: #AB3334;
-    color: #FFF;
-  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+a.active {
+  color: #AB3334;
+  font-weight: 700;
+}
+
+.accordion {
+  width: 100%;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  background: #252525;
+  box-shadow: inset 0 -1px #373737;
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  font-size: 1rem;
+}
+
+.accordion .link {
+  cursor: pointer;
+  display: block;
+  padding: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  border-bottom: 1px solid rgb(142, 163, 179);
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link {
+  border-bottom: 0;
+}
+
+.accordion li fa-icon {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  font-size: 1rem;
+  color: #807f7f;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.accordion li.open .link {
+  color: #AB3334;
+  background: #030303;
+  font-weight: 700;
+}
+
+.accordion li.open fa-icon {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.submenu {
+  display: none;
+  background: rgb(119, 134, 146);
+  font-size: 1rem;
+}
+
+.submenu li {
+  border-bottom: 1px solid rgb(142, 163, 179);
+}
+
+.submenu a {
+  display: block;
+  text-decoration: none;
+  color: #d9d9d9;
+  padding: 12px;
+  padding-left: 42px;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.submenu a:hover {
+  background: #AB3334;
+  color: #FFF;
+}

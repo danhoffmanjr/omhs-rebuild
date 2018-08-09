@@ -4,26 +4,22 @@
 }
 
 #header {
-  font-family: 'Cinzel', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  display: grid;
-  grid-template-columns: 20% auto;
-  grid-template-rows: repeat(2) 50%;
-  grid-template-areas: 
-    "logo title"
-    "logo subtitle";
+  font-family: 'Cinzel', 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+  background-color: #6F4A1B;
+  color: #fff;
 }
 
 img {
-  grid-area: logo;
-  background-color: forestgreen;
+  display: none;
 }
 
 h1 {
   grid-area: title;
   margin: 0;
-  font-size: 2.5rem;
-  background-color: slateblue;
-  height: 100%;
+  padding: 1rem;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 400;
 
 }
 
@@ -31,7 +27,8 @@ h2 {
   grid-area: subtitle;
   margin: 0;
   font-size: 1.4rem;
-  background-color: skyblue;
+  padding: 1rem;
+  font-weight: 400;
 }
 
 h2 > abbr {
@@ -45,4 +42,52 @@ h2 > abbr {
   grid-row-start: 1;
   box-sizing: border-box;
   background-color: lightblue;
+}
+
+#page {
+  margin: 0;
+  padding: 1rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media only screen and (min-width: 668px)  { 
+    #header {
+      font-family: 'Cinzel', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      display: grid;
+      grid-template-columns: 20% auto;
+      grid-template-rows: repeat(2) 50%;
+      grid-template-areas: 
+        "logo title"
+        "logo subtitle";
+    }
+    
+    img {
+      grid-area: logo;
+      display: block;
+      background-color: forestgreen;
+    }
+    
+    h1 {
+      grid-area: title;
+      margin: 0;
+      padding: 1rem 1rem 0 0;
+      font-size: 2.5rem;
+      font-weight: 400;
+      background-color: slateblue;
+      height: 100%;
+    
+    }
+    
+    h2 {
+      grid-area: subtitle;
+      margin: 0;
+      font-size: 1.4rem;
+      background-color: skyblue;
+    }
+    
+    h2 > abbr {
+      font-size: 1rem;
+    }
 }
