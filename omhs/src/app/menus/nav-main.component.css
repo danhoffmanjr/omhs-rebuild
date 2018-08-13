@@ -114,3 +114,8 @@ a.active {
   background: #AB3334;
   color: #FFF;
 }
+
+.submenu a.active {
+  color: #AB3334;
+  font-weight: 700;
+}

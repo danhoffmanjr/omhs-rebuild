@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faBars, faTimes, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { fromEvent} from 'rxjs';
+import { map } from 'rxjs/operators';
 
 declare var $:any;
 
@@ -18,8 +20,6 @@ export class NavMainComponent implements OnInit {
   open = faChevronDown;
   close = faChevronUp;
 
-  accordion;
-
   showMenu: Boolean = false;
 
   toggleMenu() {
@@ -28,36 +28,43 @@ export class NavMainComponent implements OnInit {
 
 
   ngOnInit() {
-
   }
-
+ 
   ngAfterContentInit() {
-    $(function() {
-      var Accordion = function(el, multiple) {
-        this.el = el || {};
-        this.multiple = multiple || false;
-    
-        // Variables privadas
-        var links = this.el.find('.link');
-        // Evento
-        links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
-      }
-    
-      Accordion.prototype.dropdown = function(e) {
-        var $el = e.data.el;
-          this.$this = $(this),
-          this.$next = this.$this.next();
-    
-        this.$next.slideToggle();
-        this.$this.parent().toggleClass('open');
-    
-        if (!e.data.multiple) {
-          $el.find('.submenu').not(this.$next).slideUp().parent().removeClass('open');
-        };
-      }
-
-      var accordion = new Accordion($('#accordion'), false);
+    let el = document.getElementById('accordion');
+    let mainLinks = $(el).find('.link');
+    let links = $(el).find('[role="menuitem"]');
+    let hasDropdown = mainLinks.filter((mainLinks, link) => {
+      return link.className == 'link has-sub';
     });
+    let subs = $(el).find('.submenu');
+    
+    hasDropdown.on('click', {el: el, multiple: false}, function(e){
+      var $el, $this, $next;
+      $el = e.data.el;
+      $this = $(this);
+      $next = $this.next();
+    
+      $next.slideToggle();
+      $this.parent().toggleClass('open');
+  
+      subs.not($next).slideUp().parent().removeClass('open');
+    })
+
+    // TODO: fix the active link if user reloads site (currently resets to OMHS Home). Prob better to set active link by route on init
+    links.on('click', function(){
+      var $this = $(this);
+      links.removeClass('active');
+      $this.addClass('active');
+    });
+    
+    // const linkClick$ = fromEvent(links, 'click');
+
+    // linkClick$.subscribe( 
+    //   event => console.log(event),
+    //   error => console.log(error),
+    //   () => console.log('Completed')
+    // );
   }
 
 }

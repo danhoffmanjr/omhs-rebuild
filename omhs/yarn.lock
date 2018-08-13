@@ -224,6 +224,12 @@
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
+"@reactivex/rxjs@^6.2.2":
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/@reactivex/rxjs/-/rxjs-6.2.2.tgz#dccd387b8c561494f1310ceb10175d382e4c18ec"
+  dependencies:
+    tslib "^1.9.0"
+
 "@schematics/angular@0.7.1":
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-0.7.1.tgz#29db78d148d3260e9bb545c86a4c6bfbaed9e933"

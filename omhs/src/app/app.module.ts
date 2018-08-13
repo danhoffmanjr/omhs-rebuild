@@ -8,9 +8,11 @@ import { NavMainComponent } from './menus/nav-main.component';
 import { NavSecondaryComponent } from './menus/nav-secondary.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AcupunctureHomeComponent } from './pages/acupuncture-home/acupuncture-home.component';
+import { AboutComponent } from './pages/about/about.component';
 
 const routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'acupuncture/home', component: AcupunctureHomeComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
   //{ path: '**', component: PageNotFoundComponent }
@@ -22,7 +24,8 @@ const routes = [
     NavMainComponent,
     NavSecondaryComponent,
     HomeComponent,
-    AcupunctureHomeComponent
+    AcupunctureHomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

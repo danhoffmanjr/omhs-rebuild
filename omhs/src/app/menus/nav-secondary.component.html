@@ -1,4 +1,4 @@
-<ul role="menu" id="accordion" class="accordion">
+<ul role="menu" class="accordion">
   <li role="none" tabindex="-1">
     <div class="link" role="presentation">
       <a [routerLink]="['/home']" (click)="toggleMenu()" class="active" role="menuitem">OMHS Home</a>
@@ -6,7 +6,7 @@
   </li>
   <li role="none" tabindex="-1">
     <div class="link" role="presentation">
-      <a href="#" role="menuitem">About OMHS</a>
+      <a [routerLink]="['/about']" (click)="toggleMenu()" role="menuitem">About OMHS</a>
     </div>
   </li>
   <li role="none" tabindex="-1">
@@ -35,7 +35,7 @@
     </div>
   </li>
   <li role="none" tabindex="-1">
-    <div class="link" role="presentation">Extras
+    <div class="link has-sub" role="presentation">Extras
       <fa-icon [icon]="open"></fa-icon>
     </div>
     <ul class="submenu" role="menu">

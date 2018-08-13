@@ -1,3 +1,11 @@
+.banner {
+    width: 100%;
+}
+
+section, aside {
+    padding: 0 1rem;
+}
+
 .callout {
     font-family: 'Roboto+Condensed', Arial, Helvetica, sans-serif;
     padding: 1rem;
@@ -6,7 +14,43 @@
 }
 
 .email-signup {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    background-color: #80B1CF;
+}
+
+.email-signup h4 {
+    margin: 0 0 .5rem 0;
+    padding: .5rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    background-color: #80B1CF;
+}
+
+.email-signup button {
     font-family: 'Roboto+Condensed', Arial, Helvetica, sans-serif;
     padding: 1rem;
-    background-color: rgb(142, 163, 179);
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #FFB31A;
+    border: none;
+    border-radius: .5rem;
+    color: #fff;
+    float: right;
+}
+
+.email-signup input#addBar {
+    font-family: 'Roboto+Condensed', Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    border: 1px solid #FFAA00;
+    border: none;
+    width: 15rem;
+    border-radius: .5rem;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+}
+
+.email-signup input#addBar:focus {
+    border: 2px solid #FFAA00;
 }
