@@ -19,6 +19,7 @@ export class NavMainComponent implements OnInit {
   bars = faBars;
   open = faChevronDown;
   close = faChevronUp;
+  screenWidth;
 
   showMenu: Boolean = false;
 
@@ -32,6 +33,10 @@ export class NavMainComponent implements OnInit {
 
 
   ngOnInit() {
+     this.screenWidth = window.innerWidth;
+     if (this.screenWidth > 668) {
+       this.showMenu = true;
+    }
   }
  
   ngAfterContentInit() {

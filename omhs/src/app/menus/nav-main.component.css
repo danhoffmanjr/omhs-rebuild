@@ -119,3 +119,8 @@ a.active {
   color: #AB3334;
   font-weight: 700;
 }
+
+@media only screen and (min-width: 668px)  {
+  button[aria-haspopup] { display: none; }
+  #mobile-secondary-nav { display: none; }
+}

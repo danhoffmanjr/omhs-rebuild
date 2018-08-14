@@ -6,8 +6,11 @@
       <abbr title="MASTER OF SCIENCE IN TRADITIONAL ORIENTAL MEDICINE">MSTOM</abbr>
     </h2>
   </header>
-  <section id="mobile-nav-header">
-      <app-nav-main></app-nav-main>
+  <section id="mobile-nav-header" *ngIf="sizeMobile">
+    <app-nav-main></app-nav-main>
+  </section>
+  <section id="tabletPlus-nav" *ngIf="sizeTablet">
+    <app-nav-main></app-nav-main>
   </section>
   <section id="page">
     <router-outlet></router-outlet>
