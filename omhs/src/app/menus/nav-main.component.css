@@ -22,12 +22,6 @@ button[aria-haspopup]:hover, .accordion .link:hover, button[aria-haspopup]:focus
   background: #030303;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
@@ -40,7 +34,9 @@ a.active {
 
 .accordion {
   width: 100%;
+  list-style-type: none;
   margin: 0;
+  padding: 0;
   color: rgba(255, 255, 255, 0.8);
   background: #252525;
   box-shadow: inset 0 -1px #373737;
@@ -59,10 +55,6 @@ a.active {
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-}
-
-.accordion li:last-child .link {
-  border-bottom: 0;
 }
 
 .accordion li fa-icon {
@@ -93,6 +85,9 @@ a.active {
   display: none;
   background: rgb(119, 134, 146);
   font-size: 1rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .submenu li {
@@ -120,7 +115,101 @@ a.active {
   font-weight: 700;
 }
 
-@media only screen and (min-width: 668px)  {
+@media only screen and (min-width: 670px) {
   button[aria-haspopup] { display: none; }
   #mobile-secondary-nav { display: none; }
+
+  .accordion {
+    display: flex;
+    position: relative;
+    margin: 0;
+    height: 125px;
+    color: rgba(255, 255, 255, 0.8);
+    background: #f2f1f0;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    font-size: 1rem;
+    justify-content: flex-end;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .accordion li {
+    width: 100px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid #ffffff;
+  }
+
+  .accordion .link {
+    cursor: pointer;
+    display: block;
+    padding: 15px 5px 15px 5px;
+    box-sizing: border-box;
+    color: #333333;
+    font-size: .85rem;
+    position: relative;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  .accordion li.open .link {
+    color: #fff;
+    background: #6F4A1B;
+    font-weight: 400;
+  }
+
+  .accordion .link:hover {
+    background-color: #e7e4e1;
+  }
+
+  .accordion li fa-icon {
+    display: none;
+  }
+
+  .submenu {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    width: 805px;
+    background: #6F4A1B;
+    font-size: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 0;
+    border: none;
+    z-index: 100;
+  }
+
+  .submenu li {
+    background: #6F4A1B;
+    font-size: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 8px 0 0 0;
+    width: auto;
+    height: auto;
+    border: none;
+  }
+
+  .submenu a {
+    display: block;
+    text-decoration: none;
+    color: #d9d9d9;
+    padding: 5px 20px 10px 20px;
+    height: auto;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: .85rem;
+  }
+
+  .submenu a:hover {
+    background: #FFF;
+    color: #AB3334;
+  }
 }

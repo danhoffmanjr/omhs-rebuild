@@ -24,7 +24,9 @@ export class NavMainComponent implements OnInit {
   showMenu: Boolean = false;
 
   toggleMenu() {
-    this.showMenu = !this.showMenu;
+    if (this.screenWidth < 670) {
+      this.showMenu = !this.showMenu;
+    }
   }
 
   onKeydown(event) {
@@ -34,7 +36,7 @@ export class NavMainComponent implements OnInit {
 
   ngOnInit() {
      this.screenWidth = window.innerWidth;
-     if (this.screenWidth > 668) {
+     if (this.screenWidth > 669) {
        this.showMenu = true;
     }
   }

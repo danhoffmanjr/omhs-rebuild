@@ -18,20 +18,20 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.screenWidth = window.innerWidth;
-    if (this.screenWidth > 668) {
+    if (this.screenWidth > 669) {
       this.sizeMobile = false;
       this.sizeTablet = true;
     }
 
     fromEvent(window, 'resize')
       .pipe(
-        map(event => window.innerWidth)
+        map(() => window.innerWidth)
       )
       .subscribe(
-        event => {
-          this.screenWidth = event;
-          this.sizeMobile = (event > 668) ? false : true;
-          this.sizeTablet = (event > 668) ? true : false;
+        windowWidth => {
+          this.screenWidth = windowWidth;
+          this.sizeMobile = (windowWidth > 669) ? false : true;
+          this.sizeTablet = (windowWidth > 669) ? true : false;
         },
         error => console.log(error),
         () => console.log('Completed')
