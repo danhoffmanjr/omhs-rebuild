@@ -1,5 +1,5 @@
 <nav role="navigation" id="navMain" class="nav-main">
-  <button aria-haspopup="true" aria-expanded="false" (click)="toggleMenu()">
+  <button aria-haspopup="true" aria-expanded="false" (click)="toggleMenu()" (keydown.enter)="onKeydown($event)">
     MENU 
     <fa-icon [icon]="bars" aria-hidden="true"></fa-icon>
   </button>
@@ -7,61 +7,61 @@
     <li role="none" tabindex="-1">
       <div class="link has-sub" role="presentation">Acupuncture <fa-icon [icon]="open"></fa-icon></div>
       <ul class="submenu" role="menu">
-        <li role="none" tabindex="-1"><a routerLink="/acupuncture/home" role="menuitem" (click)="toggleMenu()">Home</a></li>
-        <li role="none" tabindex="-1"><a href="#" role="menuitem">History</a></li>
-        <li role="none" tabindex="-1"><a href="#" role="menuitem">Meridians</a></li>
-        <li role="none" tabindex="-1"><a href="#" role="menuitem">Points</a></li>
-        <li role="none" tabindex="-1"><a href="#" role="menuitem">Needles</a></li>
-        <li role="none" tabindex="-1"><a href="#" role="menuitem">FAQ</a></li>
+        <li role="none" tabindex="-1"><a [routerLink]="['/acupuncture/home']" routerLinkActive="active" role="menuitem" (click)="toggleMenu()">Home</a></li>
+        <li role="none" tabindex="-1"><a routerLink="/acupuncture/history" routerLinkActive="active" role="menuitem">History</a></li>
+        <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Meridians</a></li>
+        <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Points</a></li>
+        <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Needles</a></li>
+        <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">FAQ</a></li>
       </ul>
     </li>
     <li role="none" tabindex="-1">
       <div class="link has-sub" role="presentation">T'ai Chi <fa-icon [icon]="open"></fa-icon></div>
       <ul class="submenu" role="menu">
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Home</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">History</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Structure &amp; Movements</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Benefits</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Home</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">History</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Structure &amp; Movements</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Benefits</a></li>
       </ul>
     </li>
     <li role="none" tabindex="-1">
       <div class="link has-sub" role="presentation">Qigong <fa-icon [icon]="open"></fa-icon></div>
       <ul class="submenu" role="menu">
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Home</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">History</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Benefits</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Classes</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Home</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">History</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Benefits</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Classes</a></li>
       </ul>
     </li>
     <li role="none" tabindex="-1">
       <div class="link has-sub" role="presentation">Tuina Bodywork <fa-icon [icon]="open"></fa-icon></div>
       <ul class="submenu" role="menu">
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Home</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">History</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Brian's Training</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Qualities of Practitioner</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Types &amp; Methods</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Home</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">History</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Brian's Training</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Qualities of Practitioner</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Types &amp; Methods</a></li>
       </ul>
     </li>
     <li role="none" tabindex="-1">
       <div class="link has-sub" role="presentation">Chinese Herbology <fa-icon [icon]="open"></fa-icon></div>
       <ul class="submenu" role="menu">
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Home</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">History</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Single Herbs</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Formulas</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Usage</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Home</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">History</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Single Herbs</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Formulas</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Usage</a></li>
       </ul>
     </li>
     <li role="none" tabindex="-1">
       <div class="link has-sub" role="presentation">Addiction Therapy <fa-icon [icon]="open"></fa-icon></div>
       <ul class="submenu" role="menu">
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Home</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">History</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">NADA Protocol</a></li>
-          <li role="none" tabindex="-1"><a href="#" role="menuitem">Treatments</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Home</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">History</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">NADA Protocol</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Treatments</a></li>
       </ul>
     </li>
-    <app-nav-secondary></app-nav-secondary>
+    <app-nav-secondary id="mobile-secondary-nav"></app-nav-secondary>
   </ul>
 </nav>

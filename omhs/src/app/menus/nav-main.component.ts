@@ -26,6 +26,10 @@ export class NavMainComponent implements OnInit {
     this.showMenu = !this.showMenu;
   }
 
+  onKeydown(event) {
+    this.showMenu = !this.showMenu;
+  }
+
 
   ngOnInit() {
   }
@@ -52,11 +56,10 @@ export class NavMainComponent implements OnInit {
     })
 
     // TODO: fix the active link if user reloads site (currently resets to OMHS Home). Prob better to set active link by route on init
-    links.on('click', function(){
-      var $this = $(this);
-      links.removeClass('active');
-      $this.addClass('active');
-    });
+    // links.click(function() {
+    //   links.removeClass('active');
+    //   $(this).addClass('active');
+    // });
     
     // const linkClick$ = fromEvent(links, 'click');
 
