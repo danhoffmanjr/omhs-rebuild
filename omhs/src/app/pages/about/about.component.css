@@ -1,0 +1,60 @@
+.banner {
+    width: 100%;
+}
+
+section, main, aside {
+    padding: 0 1rem;
+    box-sizing: border-box; 
+}
+
+@media only screen and (min-width: 670px) {
+    .page-grid {
+        display: grid;
+        grid-template-columns: 160px auto 192px;
+        grid-template-rows: repeat(2) auto;
+        grid-template-areas: "callout banner banner" "nav main main";
+    }
+
+    .banner {
+        grid-area: banner;
+        object-fit: contain;
+    }
+
+    .callout {
+        grid-area: callout;
+        background-color: #6F4A1B;
+        color: #fff;
+        z-index: 1000;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
+        font-size: 1rem;
+        padding-right: 2rem;
+    }
+
+    main h3 {
+        font-size: 1.5rem;
+    }
+
+    main a {
+        color: #AB3334;
+        text-decoration: none;
+    }
+
+    main a:hover {
+        text-decoration: underline;
+    }
+
+    aside {
+        grid-area: aside;
+        padding: 1rem .75rem;
+        font-size: .75rem;
+        line-height: 1.1rem;
+    }
+
+}
