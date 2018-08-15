@@ -90,3 +90,95 @@ a.active {
   background: #AB3334;
   color: #FFF;
 }
+
+@media only screen and (min-width: 670px) {
+  .accordion {
+    width: 100%;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #e7e4e1;
+    box-shadow: none;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+  }
+
+  .accordion li {
+    color: #666666;
+  }
+
+  .accordion li fa-icon {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    font-size: 1rem;
+    color: #807f7f;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+
+  .accordion .link {
+    cursor: pointer;
+    display: block;
+    padding: 0;
+    color: #666666;
+    font-size: .8rem;
+    border-bottom: 1px solid #FFF;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+
+  .accordion li.open .link {
+    color: #AB3334;
+    background-color: #e7e4e1;
+    font-weight: 700;
+  }
+
+  .accordion .link a {
+    display: block;
+    color: #666666;
+    padding: 8px 10px;
+  }
+
+  .accordion .has-sub {
+    padding: 8px 10px;
+  }
+
+  .accordion .link a:hover {
+    background: #AB3334;
+    color: #FFF;
+  }
+
+  .accordion .link a.active {
+    color: #AB3334;
+    font-weight: 700;
+  }
+
+  .accordion .link a.active:hover {
+    color: #FFF;
+  }
+  
+  .submenu {
+    display: none;
+    background: rgb(119, 134, 146);
+    font-size: .8rem;
+  }
+
+  .submenu a {
+    display: block;
+    text-decoration: none;
+    color: #d9d9d9;
+    padding: 8px;
+    padding-left: 20px;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+  }
+  
+  .submenu a:hover {
+    background: #AB3334;
+    color: #FFF;
+  }
+
+}

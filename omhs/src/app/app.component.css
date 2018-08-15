@@ -5,6 +5,11 @@
 #grid-container {
   display: grid;
   grid-template-rows: repeat(3) auto;
+  background-color: #FFF;
+  background-image: url(/assets/images/bkgd_rice_paper.png);
+  background-repeat: repeat-y;
+  width: 100%;
+  height: 100%;
 }
 
 #header {
@@ -22,14 +27,14 @@ h1 {
   margin: 0;
   padding: 1rem;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
 h2 {
   grid-area: subtitle;
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   padding: 0 1rem 1rem 1rem;
   font-weight: 400;
 }
@@ -57,6 +62,7 @@ h2>abbr {
 
 #page {
   margin: 0;
+  padding: 0;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -66,39 +72,45 @@ h2>abbr {
   #grid-container {
     width: 805px;
     margin: 0 auto;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.3);
   }
-
   #header {
     font-family: 'Cinzel', 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
     display: grid;
-    background-color: #EEEBE9;
+    background-color: #EEE;
     color: #000;
-    grid-template-columns: 20% auto;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(rgb(221, 218, 218)));
+    background-image: -webkit-linear-gradient(top, #EEE, rgb(221, 218, 218));
+    background-image: -moz-linear-gradient(top, #EEE, rgb(221, 218, 218));
+    background-image: -ms-linear-gradient(top, #EEE, rgb(221, 218, 218));
+    background-image: -o-linear-gradient(top, #EEE, rgb(221, 218, 218));
+    background-image: linear-gradient(to bottom, #EEE, rgb(221, 218, 218));
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#EEE, endColorstr=rgb(221, 218, 218));
+    grid-template-columns: 13% auto;
     grid-template-rows: repeat(2) 50%;
     grid-template-areas: "logo title" "logo subtitle";
   }
-
   img {
     grid-area: logo;
-    display: block;
+    display: inline-block;
+    align-self: center;
+    justify-self: center;
   }
-
   h1 {
     grid-area: title;
     margin: 0;
     padding: 1rem 1rem 0 0;
-    font-size: 1.85rem;
+    font-size: 2rem;
     font-weight: 700;
+    color: #333333;
   }
-  
   h2 {
     grid-area: subtitle;
     margin: 0;
     padding: 0 0 1rem 0;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     font-weight: 400;
   }
-  
   h2>abbr {
     font-size: 1rem;
   }

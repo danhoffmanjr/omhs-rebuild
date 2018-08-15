@@ -2,11 +2,12 @@
     width: 100%;
 }
 
-section, aside {
+section, main, aside {
     padding: 0 1rem;
+    box-sizing: border-box; 
 }
 
-.callout {
+.callout-lg {
     font-family: 'Roboto+Condensed', Arial, Helvetica, sans-serif;
     padding: 1rem;
     background-color: #6F4A1B;
@@ -40,6 +41,10 @@ section, aside {
     float: right;
 }
 
+.email-signup button:hover {
+    background-color: rgb(252, 169, 5);
+}
+
 .email-signup input#addBar {
     font-family: 'Roboto+Condensed', Arial, Helvetica, sans-serif;
     padding: 1rem;
@@ -53,4 +58,92 @@ section, aside {
 
 .email-signup input#addBar:focus {
     border: 2px solid #FFAA00;
+}
+
+.sbObj {
+    border-top: 1px solid #636363;
+}
+
+@media only screen and (min-width: 670px) {
+    .page-grid {
+        display: grid;
+        grid-template-columns: 160px auto 192px;
+        grid-template-rows: repeat(2) auto;
+        grid-template-areas: "callout banner banner" "nav main aside";
+    }
+
+    .callout {
+        grid-area: callout;
+        background-color: #6F4A1B;
+        color: #fff;
+        z-index: 1000;
+    }
+
+    .banner {
+        grid-area: banner;
+        object-fit: contain;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
+        border-right: 1px solid #ababab;
+        font-size: .95rem;
+    }
+
+    aside {
+        grid-area: aside;
+        padding: 1rem .75rem;
+        font-size: .75rem;
+        line-height: 1.1rem;
+    }
+
+    .callout-lg {
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        padding: 0;
+        background-color: transparent;
+        color: #000;
+    }
+
+    .email-signup {
+        margin-top: .75rem;
+        padding: .7rem;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        background-color: #80B1CF;
+        border-radius: 8px;
+    }
+
+    .email-signup h4 {
+        margin: 0 0 .5rem 0;
+        padding: 0;
+        font-size: .9rem;
+        line-height: 1.3rem;
+    }
+
+    .email-signup input#addBar {
+        font-family: 'Roboto+Condensed', Arial, Helvetica, sans-serif;
+        padding: .5rem;
+        border: none;
+        width: 100%;
+        border-radius: .5rem;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+    }
+
+    .email-signup button {
+        font-family: 'Roboto+Condensed', Arial, Helvetica, sans-serif;
+        display: block;
+        margin: .5rem auto 0 auto;
+        padding: .4rem;
+        font-size: 1rem;
+        font-weight: 500;
+        background-color: #FFB31A;
+        border-radius: .5rem;
+        color: #fff;
+        float: none;
+        text-align: center;
+    }
 }

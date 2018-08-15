@@ -130,10 +130,11 @@ a.active {
     font-size: 1rem;
     justify-content: flex-end;
     border-bottom: 1px solid #ffffff;
+    box-shadow: none;
   }
 
   .accordion li {
-    width: 100px;
+    width: 105px;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -143,10 +144,10 @@ a.active {
   .accordion .link {
     cursor: pointer;
     display: block;
-    padding: 15px 5px 15px 5px;
+    padding: 15px 7px;
     box-sizing: border-box;
     color: #333333;
-    font-size: .85rem;
+    font-size: .9rem;
     position: relative;
     border: none;
     width: 100%;
@@ -178,9 +179,10 @@ a.active {
     font-size: 1rem;
     list-style-type: none;
     margin: 0;
-    padding: 0 0 0 0;
+    padding: 0 0 0 165px;
     border: none;
     z-index: 100;
+    /* box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5); */
   }
 
   .submenu li {
@@ -211,5 +213,11 @@ a.active {
   .submenu a:hover {
     background: #FFF;
     color: #AB3334;
+  }
+
+  .submenu a.active {
+    background: #FFF;
+    color: #AB3334;
+    background-image: url(/assets/images/bkgd_rice_paper.png);
   }
 }
