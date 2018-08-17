@@ -9,11 +9,13 @@ import { NavSecondaryComponent } from './menus/nav-secondary.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AcupunctureHomeComponent } from './pages/acupuncture-home/acupuncture-home.component';
 import { AboutComponent } from './pages/about/about.component';
+import { AcupunctureHistoryComponent } from './pages/acupuncture-history/acupuncture-history.component';
 
 const routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'acupuncture/home', component: AcupunctureHomeComponent },
+  { path: 'acupuncture/history', component: AcupunctureHistoryComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
   //{ path: '**', component: PageNotFoundComponent }
 ];
@@ -25,7 +27,8 @@ const routes = [
     NavSecondaryComponent,
     HomeComponent,
     AcupunctureHomeComponent,
-    AboutComponent
+    AboutComponent,
+    AcupunctureHistoryComponent
   ],
   imports: [
     BrowserModule,

@@ -5,10 +5,10 @@
   </button>
   <ul role="menu" id="accordion" class="accordion" [hidden]="!showMenu">
     <li role="none" tabindex="-1">
-      <div class="link has-sub" role="presentation">Acupuncture <fa-icon [icon]="open"></fa-icon></div>
+      <div class="link has-sub" id ="acupuncture" role="presentation">Acupuncture <fa-icon [icon]="open"></fa-icon></div>
       <ul class="submenu" style="display: none" role="menu">
         <li role="none" tabindex="-1"><a [routerLink]="['/acupuncture/home']" routerLinkActive="active" role="menuitem" (click)="toggleMenu()">Home</a></li>
-        <li role="none" tabindex="-1"><a routerLink="/acupuncture/history" routerLinkActive="active" role="menuitem">History</a></li>
+        <li role="none" tabindex="-1"><a [routerLink]="['/acupuncture/history']" routerLinkActive="active" role="menuitem">History</a></li>
         <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Meridians</a></li>
         <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Points</a></li>
         <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Needles</a></li>
@@ -39,7 +39,7 @@
           <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Home</a></li>
           <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">History</a></li>
           <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Brian's Training</a></li>
-          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Qualities of Practitioner</a></li>
+          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Practitioner Qualities</a></li>
           <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Types &amp; Methods</a></li>
       </ul>
     </li>

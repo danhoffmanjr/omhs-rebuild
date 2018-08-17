@@ -84,7 +84,7 @@ h2>abbr {
     background-image: -moz-linear-gradient(top, #EEE, rgb(221, 218, 218));
     background-image: -ms-linear-gradient(top, #EEE, rgb(221, 218, 218));
     background-image: -o-linear-gradient(top, #EEE, rgb(221, 218, 218));
-    background-image: linear-gradient(to bottom, #EEE, rgb(221, 218, 218));
+    background-image: linear-gradient(to bottom, #FEFEFE, rgb(236, 234, 234));
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#EEE, endColorstr=rgb(221, 218, 218));
     grid-template-columns: 13% auto;
     grid-template-rows: repeat(2) 50%;

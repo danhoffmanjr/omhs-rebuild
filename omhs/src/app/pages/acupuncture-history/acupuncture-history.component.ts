@@ -5,11 +5,11 @@ import { map } from 'rxjs/operators';
 declare var $:any;
 
 @Component({
-  selector: 'app-acupuncture-home',
-  templateUrl: './acupuncture-home.component.html',
-  styleUrls: ['./acupuncture-home.component.css']
+  selector: 'app-acupuncture-history',
+  templateUrl: './acupuncture-history.component.html',
+  styleUrls: ['./acupuncture-history.component.css']
 })
-export class AcupunctureHomeComponent implements OnInit {
+export class AcupunctureHistoryComponent implements OnInit {
 
   constructor() { }
 

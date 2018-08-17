@@ -61,12 +61,6 @@ export class NavMainComponent implements OnInit {
   
       subs.not($next).slideUp().parent().removeClass('open');
     })
-
-    // TODO: fix the active link if user reloads site (currently resets to OMHS Home). Prob better to set active link by route on init
-    // links.click(function() {
-    //   links.removeClass('active');
-    //   $(this).addClass('active');
-    // });
     
     // const linkClick$ = fromEvent(links, 'click');
 

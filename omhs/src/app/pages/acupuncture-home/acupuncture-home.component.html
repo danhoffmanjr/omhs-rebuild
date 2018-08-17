@@ -1,3 +1,48 @@
-<p>
-  acupuncture-home works!
-</p>
+<div class="page-grid">
+  <section *ngIf="!sizeMobile">
+    <img class="banner" src="../../../assets/images/acupuncture_needles.jpg" >
+  </section>
+  <nav role="navigation" *ngIf="!sizeMobile">
+    <app-nav-secondary></app-nav-secondary>
+  </nav>
+  <main>
+    <h2>Welcome to OMHS Acupuncture</h2>
+    <p class="sub-head">Brian C. Allen, MSTOM of Wilmington, Delaware is one of the finest and most qualified acupuncturists in the area.</p>
+    <p class="sub-head">Please read on to discover the basics about acupuncture.</p>
+    <h3>
+      <img title="zhen jiu" alt="zhen jiu" src="../../../assets/images/acu-hanzi.gif" width="100" align="middle" /> (zhen jiu)
+    </h3>
+    <p>zhen jiu - acupuncture and moxibustion; to give or have acupuncture and moxibustion.</p>
+    <h3>Acupuncture</h3>
+    <p>From the Latin, <em>acus</em> &ndash; a needle, and <em>pungere</em> &ndash; to prick.</p>
+    <h4>What is Acupuncture?</h4>
+    <ul>
+      <li>A healing practice originally from China.</li>
+      <li>Fine needles are inserted into the body at specific points for treating health problems.</li>
+      <li>Most commonly associated with Chinese (Oriental) medicine.</li>
+    </ul>
+    <h4>How does Acupuncture work?</h4>
+    <ul>
+      <li>Ancient Chinese discovered that Qi flows through meridians in the body.
+        <ul>
+          <li>Along those meridians are acupuncture points.</li>
+          <li>Qi can be accessed through those points.</li>
+        </ul>
+      </li>
+      <li>Good health depends on the smooth and proper flow of Qi.</li>
+      <li>Acupuncture regulates the Qi flow.</li>
+    </ul>
+    <h4>Western Biomedical View</h4>
+    <ul>
+      <li>Acupuncture affects many systems in body:
+        <ul>
+          <li>Nervous</li>
+          <li>Vascular</li>
+          <li>Musculoskeletal</li>
+        </ul>
+      </li>
+      <li>The mechanisms by which acupuncture works are not yet fully understood by Western science.</li>
+      <li>Research is becoming more mainstream.</li>
+    </ul>
+  </main>
+</div>
