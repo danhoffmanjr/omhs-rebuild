@@ -20,6 +20,25 @@ h3, h4 {
     font-family: 'Roboto-Slab', 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
 }
 
+#tooltip-container{
+    display:none;
+    color: #fff;
+    position: absolute;
+    padding: 1rem;
+    max-width:200px;
+    background-color: rgba(0,0,0,.75);
+    border-radius: .8rem; 
+}
+
+#tooltip-container img{
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.tooltip-html{
+    display:none;
+}
+
 @media only screen and (min-width: 670px) {
     .page-grid {
         display: grid;
