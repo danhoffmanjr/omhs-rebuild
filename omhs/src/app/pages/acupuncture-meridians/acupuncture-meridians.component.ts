@@ -4,11 +4,11 @@ import { WindowResizeService } from '../../services/window-resize.service';
 declare var $:any;
 
 @Component({
-  selector: 'app-acupuncture-home',
-  templateUrl: './acupuncture-home.component.html',
-  styleUrls: ['./acupuncture-home.component.css', '../pages.css']
+  selector: 'app-acupuncture-meridians',
+  templateUrl: './acupuncture-meridians.component.html',
+  styleUrls: ['./acupuncture-meridians.component.css', '../pages.css']
 })
-export class AcupunctureHomeComponent implements OnInit {
+export class AcupunctureMeridiansComponent implements OnInit {
 
   constructor(private _resizeService: WindowResizeService) { }
 
@@ -32,7 +32,5 @@ export class AcupunctureHomeComponent implements OnInit {
       () => console.log('Completed')
     );
   }
-
-  
 
 }

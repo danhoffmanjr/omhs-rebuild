@@ -1,0 +1,87 @@
+main {
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+main h2 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    margin-bottom: -5px;
+}
+
+h3, h4 {
+    margin-bottom: -10px;
+}
+
+#tooltip-container{
+    display:none;
+    color: #fff;
+    position: absolute;
+    padding: 1rem;
+    max-width:200px;
+    background-color: rgba(0,0,0,.8);
+    border-radius: .8rem; 
+}
+
+#tooltip-container img{
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.tooltip-html{
+    display:none;
+}
+
+.float-right {
+    margin: 3rem 0 2rem 2rem;
+    float: right;
+}
+
+@media only screen and (min-width: 670px) {
+    .page-grid {
+        display: grid;
+        grid-template-columns: 160px auto;
+        grid-template-rows: 195px auto;
+        grid-template-areas: "banner main" "nav main";
+        border-top: 37px solid #6F4A1B;
+    }
+
+    .banner {
+        grid-area: banner;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        grid-area: nav;
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        grid-area: main;
+        font-size: 1rem;
+        padding: 0 2rem 2rem 1.5rem;
+    }
+
+    main h2 {
+        font-size: 2rem;
+    }
+
+    main h3 {
+        font-size: 1.3rem;
+    }
+
+    main a {
+        color: #AB3334;
+        text-decoration: none;
+    }
+
+    main a:hover {
+        text-decoration: underline;
+    }
+
+}

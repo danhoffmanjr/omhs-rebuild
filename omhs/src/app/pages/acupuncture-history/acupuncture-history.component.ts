@@ -7,7 +7,7 @@ declare var $:any;
 @Component({
   selector: 'app-acupuncture-history',
   templateUrl: './acupuncture-history.component.html',
-  styleUrls: ['./acupuncture-history.component.css']
+  styleUrls: ['./acupuncture-history.component.css', '../pages.css']
 })
 export class AcupunctureHistoryComponent implements OnInit {
 
@@ -33,8 +33,9 @@ export class AcupunctureHistoryComponent implements OnInit {
       () => console.log('Completed')
     );
 
-      $('.tooltip')
+    $('.tooltip')
       .mouseover(function(e){
+
         if( $(this).attr('data-tip-type') == 'text' ){
           $('#tooltip-container').html($(this).attr('data-tip-source'));
         }
