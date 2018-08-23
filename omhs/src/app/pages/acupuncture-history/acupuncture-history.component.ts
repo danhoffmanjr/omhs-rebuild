@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { fromEvent } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { WindowResizeService } from '../../services/window-resize.service';
+
 
 declare var $:any;
 
@@ -11,7 +11,7 @@ declare var $:any;
 })
 export class AcupunctureHistoryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _resizeService: WindowResizeService) { }
 
   screenWidth;
   sizeMobile = true;
@@ -24,18 +24,14 @@ export class AcupunctureHistoryComponent implements OnInit {
       this.activeMainMenu.next().css("display", "flex").parent().addClass("open");
     }
 
-    fromEvent(window, 'resize')
-      .pipe(
-        map(() => window.innerWidth)
-      )
-      .subscribe(
-        windowWidth => {
-          this.screenWidth = windowWidth;
-          this.sizeMobile = (windowWidth > 669) ? false : true;
-        },
-        error => console.log(error),
-        () => console.log('Completed')
-      );
+    this._resizeService.onResize$.subscribe(
+      windowWidth => {
+        this.screenWidth = windowWidth;
+        this.sizeMobile = (windowWidth > 669) ? false : true;
+      },
+      error => console.log(error),
+      () => console.log('Completed')
+    );
 
       $('.tooltip')
       .mouseover(function(e){
