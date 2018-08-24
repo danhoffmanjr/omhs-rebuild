@@ -1,0 +1,62 @@
+h2 {
+    margin-bottom: 1rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.darkGreen {
+    background-color: darkgreen;
+    color: #fff;
+}
+
+.limeGreen {
+    background-color: lime;
+}
+
+.ivory {
+    background-color: #F0E68C;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.red {
+    background-color: red;
+    color: #fff;
+}
+
+.blue {
+    background-color: blue;
+    color: #fff;
+}
+
+.purple {
+    background-color: purple;
+    color: #fff;
+}
+
+.brown {
+    background-color: brown;
+    color: #fff;
+}
+
+@media only screen and (min-width: 670px) {
+
+    img {
+        width: auto;
+    }
+
+    table td, table th {
+        padding: .4rem;
+    }
+
+}
