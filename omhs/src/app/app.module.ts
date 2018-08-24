@@ -11,6 +11,7 @@ import { AcupunctureHomeComponent } from './pages/acupuncture-home/acupuncture-h
 import { AboutComponent } from './pages/about/about.component';
 import { AcupunctureHistoryComponent } from './pages/acupuncture-history/acupuncture-history.component';
 import { AcupunctureMeridiansComponent } from './pages/acupuncture-meridians/acupuncture-meridians.component';
+import { AcupuncturePointsComponent } from './pages/acupuncture-points/acupuncture-points.component';
 
 const routes = [
   { path: 'home', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes = [
   { path: 'acupuncture/home', component: AcupunctureHomeComponent },
   { path: 'acupuncture/history', component: AcupunctureHistoryComponent },
   { path: 'acupuncture/meridians', component: AcupunctureMeridiansComponent },
+  { path: 'acupuncture/points', component: AcupuncturePointsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
   //{ path: '**', component: PageNotFoundComponent }
 ];
@@ -31,7 +33,8 @@ const routes = [
     AcupunctureHomeComponent,
     AboutComponent,
     AcupunctureHistoryComponent,
-    AcupunctureMeridiansComponent
+    AcupunctureMeridiansComponent,
+    AcupuncturePointsComponent
   ],
   imports: [
     BrowserModule,
