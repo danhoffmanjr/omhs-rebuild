@@ -5,9 +5,9 @@
   </button>
   <ul role="menu" id="accordion" class="accordion" [hidden]="!showMenu">
     <li role="none" tabindex="-1">
-      <div class="link has-sub" id ="acupuncture" role="presentation">Acupuncture <fa-icon [icon]="open"></fa-icon></div>
+      <div class="link has-sub" id="acupuncture" role="presentation">Acupuncture <fa-icon [icon]="open"></fa-icon></div>
       <ul class="submenu" style="display: none" role="menu">
-        <li role="none" tabindex="-1"><a [routerLink]="['/acupuncture/home']" routerLinkActive="active" role="menuitem" (click)="toggleMenu()">Home</a></li>
+        <li role="none" tabindex="-1"><a [routerLink]="['/acupuncture/home']" routerLinkActive="active" role="menuitem">Home</a></li>
         <li role="none" tabindex="-1"><a [routerLink]="['/acupuncture/history']" routerLinkActive="active" role="menuitem">History</a></li>
         <li role="none" tabindex="-1"><a [routerLink]="['/acupuncture/meridians']" routerLinkActive="active" role="menuitem">Meridians</a></li>
         <li role="none" tabindex="-1"><a [routerLink]="['/acupuncture/points']" routerLinkActive="active" role="menuitem">Points</a></li>
@@ -16,12 +16,12 @@
       </ul>
     </li>
     <li role="none" tabindex="-1">
-      <div class="link has-sub" role="presentation">T'ai Chi <fa-icon [icon]="open"></fa-icon></div>
+      <div class="link has-sub" id="taichi" role="presentation">T'ai Chi <fa-icon [icon]="open"></fa-icon></div>
       <ul class="submenu" style="display: none" role="menu">
-          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Home</a></li>
-          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">History</a></li>
-          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Structure &amp; Movements</a></li>
-          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Benefits</a></li>
+          <li role="none" tabindex="-1"><a [routerLink]="['/taichi/home']" routerLinkActive="active" role="menuitem">Home</a></li>
+          <li role="none" tabindex="-1"><a [routerLink]="['/taichi/history']" routerLinkActive="active" role="menuitem">History</a></li>
+          <li role="none" tabindex="-1"><a [routerLink]="['/taichi/structure']" routerLinkActive="active" role="menuitem">Structure &amp; Movements</a></li>
+          <li role="none" tabindex="-1"><a [routerLink]="['/taichi/benefits']" routerLinkActive="active" role="menuitem">Benefits</a></li>
       </ul>
     </li>
     <li role="none" tabindex="-1">

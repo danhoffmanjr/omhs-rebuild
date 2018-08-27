@@ -4,17 +4,17 @@ import { WindowResizeService } from '../../services/window-resize.service';
 declare var $:any;
 
 @Component({
-  selector: 'app-acupuncture-points',
-  templateUrl: './acupuncture-points.component.html',
-  styleUrls: ['../pages.css', './acupuncture-points.component.css']
+  selector: 'app-taichi-home',
+  templateUrl: './taichi-home.component.html',
+  styleUrls: ['../pages.css', './taichi-home.component.css']
 })
-export class AcupuncturePointsComponent implements OnInit {
+export class TaichiHomeComponent implements OnInit {
 
   constructor(private _resizeService: WindowResizeService) { }
 
   screenWidth;
   sizeMobile = true;
-  activeMainMenu = $('#acupuncture');
+  activeMainMenu = $('#taichi');
 
   ngOnInit() {
     this.screenWidth = window.innerWidth;

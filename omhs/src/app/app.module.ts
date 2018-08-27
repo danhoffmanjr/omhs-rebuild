@@ -14,6 +14,7 @@ import { AcupunctureMeridiansComponent } from './pages/acupuncture-meridians/acu
 import { AcupuncturePointsComponent } from './pages/acupuncture-points/acupuncture-points.component';
 import { AcupunctureNeedlesComponent } from './pages/acupuncture-needles/acupuncture-needles.component';
 import { AcupunctureFaqComponent } from './pages/acupuncture-faq/acupuncture-faq.component';
+import { TaichiHomeComponent } from './pages/taichi-home/taichi-home.component';
 
 const routes = [
   { path: 'home', component: HomeComponent },
@@ -24,6 +25,7 @@ const routes = [
   { path: 'acupuncture/points', component: AcupuncturePointsComponent },
   { path: 'acupuncture/needles', component: AcupunctureNeedlesComponent },
   { path: 'acupuncture/faq', component: AcupunctureFaqComponent },
+  { path: 'taichi/home', component: TaichiHomeComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
   //{ path: '**', component: PageNotFoundComponent }
 ];
@@ -40,7 +42,8 @@ const routes = [
     AcupunctureMeridiansComponent,
     AcupuncturePointsComponent,
     AcupunctureNeedlesComponent,
-    AcupunctureFaqComponent
+    AcupunctureFaqComponent,
+    TaichiHomeComponent
   ],
   imports: [
     BrowserModule,
