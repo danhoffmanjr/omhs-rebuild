@@ -10,11 +10,12 @@ declare var $:any;
 })
 export class AcupuncturePointsComponent implements OnInit {
 
-  constructor(private _resizeService: WindowResizeService) { }
-
   screenWidth;
-  sizeMobile = true;
+  sizeMobile;
+  sub;
   activeMainMenu = $('#acupuncture');
+
+  constructor(private _resizeService: WindowResizeService) {}
 
   ngOnInit() {
     this.screenWidth = window.innerWidth;
@@ -23,14 +24,14 @@ export class AcupuncturePointsComponent implements OnInit {
       this.activeMainMenu.next().css("display", "flex").parent().addClass("open");
     }
 
-    this._resizeService.onResize$.subscribe(
-      windowWidth => {
-        this.screenWidth = windowWidth;
-        this.sizeMobile = (windowWidth > 669) ? false : true;
-      },
-      error => console.log(error),
-      () => console.log('Completed')
+    this.sub = this._resizeService.isMobile$.subscribe(
+      val => this.sizeMobile = val
     );
+
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 
 }

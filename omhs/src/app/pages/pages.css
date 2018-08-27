@@ -30,6 +30,14 @@ h3, h4 {
     border-radius: .5rem;
 }
 
+a.tooltip {
+    text-decoration: underline overline dotted rgb(161, 160, 160);
+}
+
+a.tooltip:hover {
+    text-decoration: underline overline dotted #AB3334;
+}
+
 .tooltip-html{
     display:none;
 }
@@ -86,6 +94,14 @@ table {
 
     main a:hover {
         text-decoration: underline;
+    }
+
+    main a.tooltip {
+        text-decoration: underline overline dotted rgb(161, 160, 160);
+    }
+
+    main a.tooltip:hover {
+        text-decoration: underline overline dotted #AB3334;
     }
 
 }
