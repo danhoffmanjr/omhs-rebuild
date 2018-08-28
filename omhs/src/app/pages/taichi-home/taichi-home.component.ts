@@ -15,7 +15,7 @@ export class TaichiHomeComponent implements OnInit {
 
   screenWidth;
   sizeMobile = true;
-  sub = new Subscription;
+  sub: Subscription;
   activeMainMenu = $('#taichi');
 
   ngOnInit() {
