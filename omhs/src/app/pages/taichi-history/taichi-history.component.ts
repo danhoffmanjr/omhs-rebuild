@@ -1,24 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { WindowResizeService } from '../../services/window-resize.service';
 import { Subscription } from 'rxjs';
+import { WindowResizeService } from '../../services/window-resize.service';
+import { TooltipService } from '../../services/tooltip.service';
 
 declare var $:any;
 
 @Component({
-  selector: 'app-taichi-home',
-  templateUrl: './taichi-home.component.html',
-  styleUrls: ['../pages.css', './taichi-home.component.css']
+  selector: 'app-taichi-history',
+  templateUrl: './taichi-history.component.html',
+  styleUrls: ['../pages.css', './taichi-history.component.css']
 })
-export class TaichiHomeComponent implements OnInit {
+export class TaichiHistoryComponent implements OnInit {
 
-  constructor(private _resizeService: WindowResizeService) { }
+  constructor(private _resizeService: WindowResizeService, private _tooltipService: TooltipService) { }
 
   screenWidth;
   sizeMobile = true;
   sub: Subscription;
   activeMainMenu = $('#taichi');
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this._tooltipService.tooltip();
+
     this.screenWidth = window.innerWidth;
     if (this.screenWidth > 669) {
       this.sizeMobile = false;
