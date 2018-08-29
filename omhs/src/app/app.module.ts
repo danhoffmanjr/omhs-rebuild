@@ -17,6 +17,7 @@ import { AcupunctureFaqComponent } from './pages/acupuncture-faq/acupuncture-faq
 import { TaichiHomeComponent } from './pages/taichi-home/taichi-home.component';
 import { TaichiHistoryComponent } from './pages/taichi-history/taichi-history.component';
 import { TaichiStructureComponent } from './pages/taichi-structure/taichi-structure.component';
+import { TaichiBenefitsComponent } from './pages/taichi-benefits/taichi-benefits.component';
 
 const routes = [
   { path: 'home', component: HomeComponent },
@@ -30,6 +31,7 @@ const routes = [
   { path: 'taichi/home', component: TaichiHomeComponent },
   { path: 'taichi/history', component: TaichiHistoryComponent },
   { path: 'taichi/structure', component: TaichiStructureComponent },
+  { path: 'taichi/benefits', component: TaichiBenefitsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
   //{ path: '**', component: PageNotFoundComponent }
 ];
@@ -49,7 +51,8 @@ const routes = [
     AcupunctureFaqComponent,
     TaichiHomeComponent,
     TaichiHistoryComponent,
-    TaichiStructureComponent
+    TaichiStructureComponent,
+    TaichiBenefitsComponent
   ],
   imports: [
     BrowserModule,
