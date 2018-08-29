@@ -25,12 +25,12 @@
       </ul>
     </li>
     <li role="none" tabindex="-1">
-      <div class="link has-sub" role="presentation">Qigong <fa-icon [icon]="open"></fa-icon></div>
+      <div class="link has-sub" id="qigong" role="presentation">Qigong <fa-icon [icon]="open"></fa-icon></div>
       <ul class="submenu" style="display: none" role="menu">
-          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Home</a></li>
-          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">History</a></li>
-          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Benefits</a></li>
-          <li role="none" tabindex="-1"><a href="#" routerLinkActive="active" role="menuitem">Classes</a></li>
+          <li role="none" tabindex="-1"><a [routerLink]="['/qigong/home']" routerLinkActive="active" role="menuitem">Home</a></li>
+          <li role="none" tabindex="-1"><a [routerLink]="['/qigong/history']" routerLinkActive="active" role="menuitem">History</a></li>
+          <li role="none" tabindex="-1"><a [routerLink]="['/qigong/benefits']" routerLinkActive="active" role="menuitem">Benefits</a></li>
+          <li role="none" tabindex="-1"><a [routerLink]="['/qigong/classes']" routerLinkActive="active" role="menuitem">Classes</a></li>
       </ul>
     </li>
     <li role="none" tabindex="-1">
