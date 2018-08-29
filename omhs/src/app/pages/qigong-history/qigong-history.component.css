@@ -1,0 +1,9 @@
+img {
+    width: auto;
+}
+
+img.ancient-illustration {
+    margin-top: 1.75rem;
+    width: 200px;
+    float: right;
+}

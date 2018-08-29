@@ -19,6 +19,7 @@ import { TaichiHistoryComponent } from './pages/taichi-history/taichi-history.co
 import { TaichiStructureComponent } from './pages/taichi-structure/taichi-structure.component';
 import { TaichiBenefitsComponent } from './pages/taichi-benefits/taichi-benefits.component';
 import { QigongHomeComponent } from './pages/qigong-home/qigong-home.component';
+import { QigongHistoryComponent } from './pages/qigong-history/qigong-history.component';
 
 const routes = [
   { path: 'home', component: HomeComponent },
@@ -34,6 +35,7 @@ const routes = [
   { path: 'taichi/structure', component: TaichiStructureComponent },
   { path: 'taichi/benefits', component: TaichiBenefitsComponent },
   { path: 'qigong/home', component: QigongHomeComponent },
+  { path: 'qigong/history', component: QigongHistoryComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
   //{ path: '**', component: PageNotFoundComponent }
 ];
@@ -55,7 +57,8 @@ const routes = [
     TaichiHistoryComponent,
     TaichiStructureComponent,
     TaichiBenefitsComponent,
-    QigongHomeComponent
+    QigongHomeComponent,
+    QigongHistoryComponent
   ],
   imports: [
     BrowserModule,

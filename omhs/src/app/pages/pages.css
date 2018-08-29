@@ -20,15 +20,20 @@ h3, h4 {
     color: #fff;
     position: absolute;
     padding: 1rem;
-    max-width:200px;
+    max-width:500px;
     background-color: rgba(0,0,0,.8);
     border-radius: .8rem; 
     z-index: 100;
 }
 
 #tooltip-container img{
-    width: 100%;
     border-radius: .5rem;
+    max-width:500px;
+    max-height: 400px;
+}
+
+#tooltip-container em{
+    display: block;
 }
 
 a.tooltip {
